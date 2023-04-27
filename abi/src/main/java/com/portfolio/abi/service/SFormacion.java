@@ -34,5 +34,7 @@ public class SFormacion {
         formacionRepo.deleteById(id);
     }
     
-   
+    public void editarFormacion(Formacion formacion){
+        formacionRepo.save(formacion);
+    }  
 }
