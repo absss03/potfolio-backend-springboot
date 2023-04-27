@@ -32,4 +32,8 @@ public class SExperienciaLaboral {
     public void borrarExperienciaLaboral(int id){
         expRepo.deleteById(id);
     }
+    
+    public void editarExperiencia(ExperienciaLaboral experienciaLaboral){
+        expRepo.save(experienciaLaboral);
+    }
 }

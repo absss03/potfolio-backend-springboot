@@ -34,5 +34,7 @@ public class SStack {
         stackRepo.deleteById(id);
     }
     
-   
+    public void editarStack(Stack stack){
+        stackRepo.save(stack);
+    }     
 }

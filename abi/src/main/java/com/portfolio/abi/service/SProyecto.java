@@ -1,7 +1,5 @@
 package com.portfolio.abi.service;
 
-
-
 import com.portfolio.abi.entity.Proyecto;
 import com.portfolio.abi.ropository.RProyecto;
 import jakarta.transaction.Transactional;
@@ -34,6 +32,8 @@ public class SProyecto {
     public void borrarProyecto(int id){
         proyectoRepo.deleteById(id);
     }
-    
-   
+ 
+    public void editarProyecto(Proyecto proyecto){
+        proyectoRepo.save(proyecto);
+    }
 }

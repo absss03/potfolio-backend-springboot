@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -43,6 +44,11 @@ public class CFormacion {
     @DeleteMapping("/borrar/{id}")
     public void eliminarFormacion(@PathVariable int id){
         formacionServ.borrarFormacion(id);
+    }
+
+    @PutMapping("/editar")
+    public void editarFormacion(@RequestBody Formacion formacion){
+        formacionServ.editarFormacion(formacion);
     }
     
 }
